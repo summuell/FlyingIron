@@ -197,24 +197,32 @@ namespace WindowsFormsExcel01 {
 			int transferBS = 0;
 			if (checkBox1.Checked) {
 				transferBS = rowsLSYJ.Count;
-			} else {
+			} else if (checkBox15.Checked) {
 				transferBS = (rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3);
+			} else {
+				transferBS = rowsXFYJ.Count / 3;
 			}
 			int transferM1 = 0;
 			if (checkBox2.Checked) {
 				transferM1 = rowsLSYJ.Count;
+			} else if (checkBox16.Checked) {
+				transferM1 = (rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3);
 			} else {
 				transferM1 = rowsXFYJ.Count / 3;
 			}
 			int transferM2 = 0;
 			if (checkBox3.Checked) {
 				transferM2 = rowsLSYJ.Count;
+			} else if (checkBox17.Checked) {
+				transferM2 = (rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3);
 			} else {
 				transferM2 = rowsXFYJ.Count / 3;
 			}
 			int transferM3 = 0;
 			if (checkBox4.Checked) {
 				transferM3 = rowsLSYJ.Count;
+			} else if (checkBox18.Checked) {
+				transferM3 = (rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3);
 			} else {
 				transferM3 = rowsXFYJ.Count / 3;
 			}
@@ -224,7 +232,7 @@ namespace WindowsFormsExcel01 {
 			if (checkBox1.Checked) {
 				ratioBS = rowsLSCJ.Count;
 			} else if (checkBox15.Checked) {
-				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) - 
+				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) -
 					((rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3));
 			} else {
 				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3) - (rowsXFYJ.Count / 3);
