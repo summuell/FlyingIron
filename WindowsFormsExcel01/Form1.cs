@@ -125,11 +125,11 @@ namespace WindowsFormsExcel01 {
 
 			string riQi = "";
 			if (radioButton1.Checked) {
-				riQi = System.DateTime.Now.ToString("D") + "08:30 - " +
-					System.DateTime.Now.AddDays(1).ToString("D") + "17:00";
+				riQi = System.DateTime.Now.ToString("M") + "08:30 - " +
+					System.DateTime.Now.AddDays(1).ToString("M") + "17:00";
 			} else if (radioButton2.Checked) {
-				riQi = System.DateTime.Now.AddDays(-1).ToString("D") +
-					"17:00 - " + System.DateTime.Now.ToString("D") + "08:30";
+				riQi = System.DateTime.Now.AddDays(-1).ToString("M") +
+					"17:00 - " + System.DateTime.Now.ToString("M") + "08:30";
 			} else {
 				MessageBox.Show("请选择白班或夜班！");
 			}
