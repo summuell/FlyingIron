@@ -219,29 +219,40 @@ namespace WindowsFormsExcel01 {
 				transferM3 = rowsXFYJ.Count / 3;
 			}
 
-			//计算民警处结
+			//计算民警处结率
 			double ratioBS = 0;
 			if (checkBox1.Checked) {
 				ratioBS = rowsLSCJ.Count;
-			} else {
-				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) -
+			} else if (checkBox15.Checked) {
+				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) - 
 					((rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3));
+			} else {
+				ratioBS = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3) - (rowsXFYJ.Count / 3);
 			}
 			double ratioM1 = 0;
 			if (checkBox2.Checked) {
 				ratioM1 = rowsLSCJ.Count;
+			} else if (checkBox16.Checked) {
+				ratioM1 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) -
+					((rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3));
 			} else {
 				ratioM1 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3) - (rowsXFYJ.Count / 3);
 			}
 			double ratioM2 = 0;
 			if (checkBox3.Checked) {
 				ratioM2 = rowsLSCJ.Count;
+			} else if (checkBox17.Checked) {
+				ratioM2 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) -
+					((rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3));
 			} else {
 				ratioM2 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3) - (rowsXFYJ.Count / 3);
 			}
 			double ratioM3 = 0;
 			if (checkBox4.Checked) {
 				ratioM3 = rowsLSCJ.Count;
+			} else if (checkBox18.Checked) {
+				ratioM3 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3 + (rowsXFCJ.Count + rowsXFYJ.Count) % 3) -
+					((rowsXFYJ.Count / 3) + (rowsXFYJ.Count % 3));
 			} else {
 				ratioM3 = ((rowsXFCJ.Count + rowsXFYJ.Count) / 3) - (rowsXFYJ.Count / 3);
 			}
