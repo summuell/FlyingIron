@@ -134,6 +134,7 @@ namespace WindowsFormsExcel01 {
 				MessageBox.Show("请选择白班或夜班！");
 			}
 
+			//对其人名
 			string boss2 = "";
 			string member1 = "";
 			string member2 = "";
