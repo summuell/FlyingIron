@@ -244,15 +244,20 @@ namespace WindowsFormsExcel01 {
 				person1 = textBox5.Text + Convert.ToString(rowsLSCJ.Count + rowsLSYJ.Count);
 			} else if (checkBox12.Checked) {
 				person1 = textBox5.Text + "（值台）0";
-			} else {
+			} else if (checkBox19.Checked) {
 				person1 = textBox5.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3 +
 					(rowsXFCJ.Count + rowsXFYJ.Count) % 3);
+			} else {
+				person1 = textBox5.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3);
 			}
 			string person2;
 			if (checkBox7.Checked) {
 				person2 = textBox6.Text + Convert.ToString(rowsLSCJ.Count + rowsLSYJ.Count);
 			} else if (checkBox11.Checked) {
 				person2 = textBox6.Text + "（值台）0";
+			} else if (checkBox20.Checked) {
+				person2 = textBox6.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3 +
+					(rowsXFCJ.Count + rowsXFYJ.Count) % 3);
 			} else {
 				person2 = textBox6.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3);
 			}
@@ -261,6 +266,9 @@ namespace WindowsFormsExcel01 {
 				person3 = textBox7.Text + Convert.ToString(rowsLSCJ.Count + rowsLSYJ.Count);
 			} else if (checkBox10.Checked) {
 				person3 = textBox7.Text + "（值台）0";
+			} else if (checkBox21.Checked) {
+				person3 = textBox7.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3 +
+					(rowsXFCJ.Count + rowsXFYJ.Count) % 3);
 			} else {
 				person3 = textBox7.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3);
 			}
@@ -269,6 +277,9 @@ namespace WindowsFormsExcel01 {
 				person4 = textBox8.Text + Convert.ToString(rowsLSCJ.Count + rowsLSYJ.Count);
 			} else if (checkBox9.Checked) {
 				person4 = textBox8.Text + "（值台）0";
+			} else if (checkBox22.Checked) {
+				person4 = textBox8.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3 +
+					(rowsXFCJ.Count + rowsXFYJ.Count) % 3);
 			} else {
 				person4 = textBox8.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3);
 			}
@@ -277,6 +288,9 @@ namespace WindowsFormsExcel01 {
 				person5 = textBox9.Text + Convert.ToString(rowsLSCJ.Count + rowsLSYJ.Count);
 			} else if (checkBox13.Checked) {
 				person5 = textBox9.Text + "（值台）0";
+			} else if (checkBox23.Checked) {
+				person5 = textBox9.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3 +
+					(rowsXFCJ.Count + rowsXFYJ.Count) % 3);
 			} else {
 				person5 = textBox9.Text + Convert.ToString((rowsXFCJ.Count + rowsXFYJ.Count) / 3);
 			}
