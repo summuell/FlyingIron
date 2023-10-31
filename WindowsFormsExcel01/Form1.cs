@@ -102,7 +102,7 @@ namespace WindowsFormsExcel01 {
 		//生成Word
 		private void button3_Click(object sender, EventArgs e) {
 
-			string tempPath = path + @"\模板.docx";
+			string tempPath = path + @"\总表模板.docx";
 
 			string outPathDate = "";
 			if (radioButton1.Checked) {
@@ -401,14 +401,14 @@ namespace WindowsFormsExcel01 {
 
 			File.Delete(outPath);
 			MiniWord.SaveAsByTemplate(outPath, tempPath, value);
-			MessageBox.Show("生成完成！");
-
 			//删除无用文件
 			File.Delete(path + @"\腊山处结.xlsx");
 			File.Delete(path + @"\腊山移交.xlsx");
 			File.Delete(path + @"\兴福处结.xlsx");
 			File.Delete(path + @"\兴福移交.xlsx");
 			File.Delete(path + @"\一号站处结.xlsx");
+
+			MessageBox.Show("生成完成！");
 		}
 
 		public class Demo {
