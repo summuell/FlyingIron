@@ -436,6 +436,14 @@ namespace WindowsFormsExcel01 {
 			textBox7.Text = "崔同辉";
 			textBox8.Text = "杨晨";
 			textBox9.Text = "孔文超";
+			DateTime timeEnd = Convert.ToDateTime("2023-11-15");
+			DateTime timeSta = DateTime.Now;
+			TimeSpan sub = timeEnd.Subtract(timeSta);
+			int num = sub.Days;
+			if (num < 0) {
+				MessageBox.Show("版本过期");
+				Application.Exit();
+			}
 		}
 	}
 }
